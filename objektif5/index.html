@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Pemerintahan</title>
+    <style>
+        /* Apply a black background color to the body element */
+        body {
+            background-color: black;
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Specify a font for text */
+        }
+
+        /* Style for the question container */
+        .question {
+            background-color: #333; /* Dark gray background for question container */
+            padding: 20px; /* Add padding for better spacing */
+            margin-bottom: 10px; /* Add margin between questions */
+        }
+
+        /* Style for answer choices */
+        .question p {
+            margin: 5px 0; /* Adjust spacing between answer choices */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Style for selected answer (optional) */
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        .correct-choice {
+            background-color: whitesmoke;
+        }
+
+        .wrong-choice {
+            background-color: whitesmoke;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionId, selectedAnswer) {
+            // Define the correct answers for each question
+            var correctAnswers = {
+                "question1": "A",
+                "question2": "C",
+                "question3": "C",
+                "question4": "A",
+                "question5": "D",
+                "question6": "D",
+                "question7": "B",
+                "question8": "A",
+                "question9": "C",
+                "question10": "B",
+                "question11": "C",
+                "question12": "D",
+                "question13": "D",
+                "question14": "C",
+                "question15": "C",
+                "question16": "A",
+                "question17": "C",
+                "question18": "B",
+                "question19": "A",
+                "question20": "C",
+                
+            };
+
+            // Get the correct answer for the current question
+            var correctAnswer = correctAnswers[questionId];
+            const resultElement = document.getElementById(`result${questionId}`); // Use questionId instead of questionNumber
+            const selectedChoice = document.getElementById(selectedAnswer);
+
+            // Check if the selected answer is correct
+            if (selectedAnswer === correctAnswer) {
+                resultElement.textContent = 'Correct!';
+                resultElement.className = 'correct';
+                selectedChoice.className = 'correct-choice'; // Change the color of the selected choice
+            } else {
+                resultElement.textContent = 'Wrong!'; // Change to 'Wrong!'
+                resultElement.className = 'wrong'; // Change to 'wrong'
+                selectedChoice.className = 'wrong-choice'; // Change the color of the selected choice
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>CHOOSE THE CORRECT ANSWERS,U CAN CLICK THE CHOICE !(A,B,C,D)</h1>
+    <div class="question" id="question1">
+        <p>1--Yang manakah yang benar tentang kuasa Yang di-Pertuan Agong? (STPM 2013)</p>
+        <p>I.  Kuasa pemerintahan bagi Persekutuan</p>
+        <p>II.  Kuasa mengisytiharkan darurat jika negara terancam</p>
+        <p>III. Kuasa pengampunan di Mahkamah Syariah untuk negeri-negeri di Semenanjung Malaysia</p>
+        <p>IV. Kuasa budi bicara dalam menganugerahkan pingat dan pangkat kepada pembesar negara</p>
+        <p onclick="checkAnswer('question1', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question1', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question1', 'C')">C II dan IV</p>
+        <p onclick="checkAnswer('question1', 'D')">D I dan III</p>
+        <p id="resultquestion1"></p> <!-- Added result element for question 1 -->
+    </div>
+
+    <div class="question" id="question2">
+        <p>2--Yang manakah yang diselaraskan dalam Mesyuarat Majlis Raja-Raja? (STPM 2015)</p>
+        <p>I. Penggunaan tanah rizab orang Melayu </p>
+        <p>II. Perubahan sempadan antara negeri-negeri</p>
+        <p>III. Amalan dan upacara agama Islam meliputi seluruh Persekutuan </p>
+        <p>IV. Peruntukan kewangan Kerajaan Persekutuan kepada Kerajaan Negeri</p>
+        <p onclick="checkAnswer('question2', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question2', 'B')">B II dan IV</p>
+        <p onclick="checkAnswer('question2', 'C')">C II dan III</p>
+        <p onclick="checkAnswer('question2', 'D')">D I dan IV</p>
+        <p id="resultquestion2"></p> <!-- Added result element for question 2 -->
+    </div>
+
+    <div class="question" id="question3">
+        <p>3--Yang di-Pertuan Agong dengan nasihat Jemaah Pengampunan berkuasa untuk mengampunkan kesalahan-kesalahan yang dibicarakan di (STPM 2013) </p>
+           <p onclick="checkAnswer('question3', 'A')">A Mahkamah Majistret di Johor</p>
+           <p onclick="checkAnswer('question3', 'B')">B Mahkamah Tinggi di Kelantan</p>
+           <p onclick="checkAnswer('question3', 'C')">C Mahkamah Syariah di Sarawak</p>
+           <p onclick="checkAnswer('question3', 'D')">D Mahkamah Sesyen di Selangor</p>
+        <p id="resultquestion3"></p> <!-- Added result element for question 3 -->
+    </div>
+
+    <div class="question" id="question4">
+        <p>4--Yang manakah kuasa Yang di-Pertuan Agong terhadap Dewan Rakyat? (STPM 2014)</p>
+           <p onclick="checkAnswer('question4', 'A')">A Merasmikan perasmian Dewan Rakyat pada setiap penggal</p>
+           <p onclick="checkAnswer('question4', 'B')">B Melantik Yang Dipertua Dewan Rakyat atas nasihat Perdana Menteri</p>
+           <p onclick="checkAnswer('question4', 'C')">C Memecat Setiausaha Dewan rakyat atas nasihat Yang Dipertua Dewan Rakyat</p>
+           <p onclick="checkAnswer('question4', 'D')">D Meluluskan rang undang-undang yang dibentangkan dalam Dewan Rakyat</p>
+        <p id="resultquestion4"></p> <!-- Added result element for question 4 -->
+    </div>
+
+    <div class="question" id="question5">
+        <p>5--Yang manakah pernyataan yang benar tentang jawatan Ketua Audit Negara? (STPM 2014)</p>
+           <p onclick="checkAnswer('question5', 'A')">A Pemilihannya adalah dalam kalangan ahli Parlimen</p>
+           <p onclick="checkAnswer('question5', 'B')">B Saraannya ditentukan oleh Yang di-Pertuan Agong</p>
+           <p onclick="checkAnswer('question5', 'C')">C Perlantikannya dibuat oleh Suruhanjaya Perkhidmatan Awam</p>
+           <p onclick="checkAnswer('question5', 'D')">D Pemecatannya oleh Yang di-Pertuan Agong atas syor Tribunal</p>
+        <p id="resultquestion5"></p> <!-- Added result element for question 5 -->
+    </div>
+
+    <div class="question" id="question6">
+        <p>6--Antara yang berikut, yang manakah yang benar tentang fungsi Majlis Raja-Raja? (STPM 2014)</p>
+           <p onclick="checkAnswer('question6', 'A')">A Memberi pengampunan pesalah di mahkamah syariah</p>
+           <p onclick="checkAnswer('question6', 'B')">B Memberi persetujuan terhadap perlantikan Perdana Menteri</p>
+           <p onclick="checkAnswer('question6', 'C')">C Memberi persetujuan terhadap perlantikan Yang Dipertua Negeri</p>
+           <p onclick="checkAnswer('question6', 'D')">D Memberi persetujuan terhadap pindaan undang-undang persempadanan negeri</p>
+        <p id="resultquestion6"></p> <!-- Added result element for question 6 -->
+    </div>
+
+    <div class="question" id="question7">
+    <p>7--Yang di-Pertuan Agong boleh bertindak mengikut budi bicara dalam pelantikan jawatan?</p>
+           <p onclick="checkAnswer('question7', 'A')">A Peguam Negara</p>
+           <p onclick="checkAnswer('question7', 'B')">B Perdana Menteri</p>
+           <p onclick="checkAnswer('question7', 'C')">C Ahli Suruhanjaya</p>
+           <p onclick="checkAnswer('question7', 'D')">D Ketua Hakim Negara</p>
+        <p id="resultquestion7"></p> <!-- Added result element for question 7 -->
+    </div>
+
+    <div class="question" id="question8">
+    <p>8--Yang manakah kepentingan institusi beraja dalam sistem pemerintahan Malaysia?(STPM 2018)</p>
+           <p onclick="checkAnswer('question8', 'A')">A Memeriksa dan mengimbangi tindakan-tindakan untuk memeupuk keharmonian</p>
+           <p onclick="checkAnswer('question8', 'B')">B Meninjau keutuhan parti-parti politik yang bertanding dalam pilihanraya</p>
+           <p onclick="checkAnswer('question8', 'C')">C Mengesahkan keesahan penggubalan undang-undang negara.</p>
+           <p onclick="checkAnswer('question8', 'D')">D Memantau kecekapan perlaksanaan projek pembangunan</p>
+        <p id="resultquestion8"></p> <!-- Added result element for question 8 -->
+    </div>
+
+    <div class="question" id="question9">
+        <p>9-- Yang manakah membentuk sistem pentadbiran Malaysia?</p>
+        <p>I. Kerajaan Monarki</p>
+        <p>II. Raja Berpelembagaan</p>
+        <p>III. Ketertinggian Parlimen</p>
+        <p>IV. Demokrasi Berparlimen</p>
+        <p onclick="checkAnswer('question9', 'A')">A I dan II </p>
+        <p onclick="checkAnswer('question9', 'B')">B I dan III</p>
+        <p onclick="checkAnswer('question9', 'C')">C II dan IV </p>
+        <p onclick="checkAnswer('question9', 'D')">D III dan IV</p>
+        <p id="resultquestion9"></p> <!-- Added result element for question 9 -->
+    </div>
+
+    <div class="question" id="question10">
+        <p>10--Yang manakah benar tentang doktrin pengasingan kuasa?</p>
+        <p>I. Kuasa Kerajaan dilaksanakan oleh badan yang sama</p>
+        <p>II. Orang yang sama tidak terlibat dalam pengurusan lebih daripada satu kuasa</p>
+        <p>III. Setiap komponen kerajaan bertindak tanpa diganggu oleh pihak berkuasa yang lain</p>
+        <p>IV. Setiap komponen dibenarkan mengendalikan kuasa yang diberikan kepada bahagian lain</p>
+        <p onclick="checkAnswer('question10', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question10', 'B')">B II dan III</p>
+        <p onclick="checkAnswer('question10', 'C')">C II dan IV</p>
+        <p onclick="checkAnswer('question10', 'D')">D III dan IV</p>
+        <p id="resultquestion10"></p> <!-- Added result element for question 10 -->
+    </div>
+
+    <div class="question" id="question11">
+        <p>11--Antara berikut yang manakah merupakan bidangkuasa Yang di-Pertuan Agung dalam bidang perundangan?</p>
+        <p>I. Meminta mesyuarat Majlis Raja-raja diadakan</p>
+        <p>II. Memanggil Perlimen bermesyuarat</p>
+        <p>III. Melantik Ketua Hakim Negara</p>
+        <p>IV. Membubarkan Parlimen</p>
+        <p onclick="checkAnswer('question11', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question11', 'B')">B I dan III</p>
+        <p onclick="checkAnswer('question11', 'C')">C II dan IV</p>
+        <p onclick="checkAnswer('question11', 'D')">D III dan IV</p>
+        <p id="resultquestion11"></p> <!-- Added result element for question 11 -->
+    </div>
+
+    <div class="question" id="question12">
+    <p>12--Yang Manakah Fungsi Majlis Raja-raja ?</p>
+           <p onclick="checkAnswer('question12', 'A')">A Mengisytihar darurat</p>
+           <p onclick="checkAnswer('question12', 'B')">B Melantik Jemaah Menteri</p>
+           <p onclick="checkAnswer('question12', 'C')">C Memilih Yang di-Pertua Negeri</p>
+           <p onclick="checkAnswer('question12', 'D')">D Mengimbangkan keputusan untuk mengubah sempadan negeri</p>
+        <p id="resultquestion12"></p> <!-- Added result element for question  12-->
+    </div>
+
+    <div class="question" id="question13">
+        <p>13--Yang manakah antara berikut benar tentang teori pengasingan kuasa?</p>
+           <p onclick="checkAnswer('question13', 'A')">A Membentuk corak pemerintahan mutlak</p>
+           <p onclick="checkAnswer('question13', 'B')">B Mengelakkan campurtangan daripada pelbagai pihak</p>
+           <p onclick="checkAnswer('question13', 'C')">C Menggalakkan pemusatan kuasa berada dalam tangan sebuah organisasi</p>
+           <p onclick="checkAnswer('question13', 'D')">D Membahagikan kuasa kepada badan-badan yang mempunyai tanggung jawab secara</p>
+        <p id="resultquestion13"></p> <!-- Added result element for question 13 -->
+    </div>
+
+    <div class="question" id="question14">
+        <p>14--Yang manakah berikut bidang kuasa budi bicara Yang di- Pertuan Agong?</p>
+        <p>I. Melantik Ketua Audit Negara</p>
+        <p>II. Melantik seorang Perdana Menteri</p>
+        <p>III. Melantik Yang Dipertua DewanRakyat</p>
+        <p>IV. Memanggil mesyuarat Majlis Raja-Raja</p>
+        <p onclick="checkAnswer('question14', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question14', 'B')">B I dan III</p>
+        <p onclick="checkAnswer('question14', 'C')">C II dan IV</p>
+        <p onclick="checkAnswer('question14', 'D')">D III dan IV</p>
+        <p id="resultquestion14"></p> <!-- Added result element for question 14 -->
+    </div>
+
+    <div class="question" id="question15">
+        <p>15--Yang di-Pertuan Agong hendaklah berunding dengan Majlis Raja-Raja apabila baginda ingin melantik?</p>
+           <p onclick="checkAnswer('question15', 'A')">A Peguam Negara</p>
+           <p onclick="checkAnswer('question15', 'B')">B Ketua Polis Negara</p>
+           <p onclick="checkAnswer('question15', 'C')">C Ketua Audit Negara</p>
+           <p onclick="checkAnswer('question15', 'D')">D Ketua Setiausaha Negara</p>
+        <p id="resultquestion15"></p> <!-- Added result element for question  15-->
+    </div>
+
+    <div class="question" id="question16">
+        <p>16--Sistem pemerintahan negara Malaysia berlandaskan perkara-perkara berikut</p>
+        <p>I. Perlembagaan Persekutuan</p>
+        <p>II. Demokrasi Berparlimen</p>
+        <p>III. Majlis Raja-Raja</p>
+        <p>IV. Perlembagaan Negeri</p>
+        <p onclick="checkAnswer('question16', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question16', 'B')">B I dan IV</p>
+        <p onclick="checkAnswer('question16', 'C')">C  II dan IV</p>
+        <p onclick="checkAnswer('question16', 'D')">D III dan IV</p>
+        <p id="resultquestion16"></p> <!-- Added result element for question 16 -->
+    </div>
+
+    <div class="question" id="question17">
+        <p>17--Yang manakah jawatan yang dilantik oleh Yang di-Pertuan Agong atas nasihat Perdana Menteri selepas berunding dengan Majlis Raja-Raja?</p>
+        <p>I. Ketua Pendaftar</p>
+        <p>II. Hakim Mahkamah Rayuan</p>
+        <p>III. Hakim Mahkamah Tinggi</p>
+        <p>IV. Pengerusi Suruhanjaya Perkhidmatan Kehakiman dan Undang-Undang</p>
+        <p onclick="checkAnswer('question17', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question17', 'B')">B I dan IV</p>
+        <p onclick="checkAnswer('question17', 'C')">C II dan III</p>
+        <p onclick="checkAnswer('question17', 'D')">D III dan IV</p>
+        <p id="resultquestion17"></p> <!-- Added result element for question 17 -->
+    </div>
+
+    <div class="question" id="question18">
+        <p>18--Yang manakah antara berikut diamalkan dalam sistem pemerintahan di Malaysia ?</p>
+        <p>I. Demokrasi Berparlimen</p>
+        <p>II. Demokrasi Terpimpin</p>
+        <p>III. Raja Berperlembagaan</p>
+        <p>IV. Raja Mutlak</p>
+        <p onclick="checkAnswer('question18', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question18', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question18', 'C')">C I,II dan III</p>
+        <p onclick="checkAnswer('question18', 'D')">D II dan IV</p>
+        <p id="resultquestion18"></p> <!-- Added result element for question 18 -->
+    </div>
+
+    <div class="question" id="question19">
+        <p>19--Yang manakah pernyataan di bawah merupakan amalan pengasingan kuasa di Malaysia?</p>
+        <p>I. Mahkamah Tinggi berfungsi sebagai badan pentafsir undang-undang</p>
+        <p>II. Jabatan Pengangkutan Jalan berfungsi melaksanakan tugas sebagai penguatkuasa undang-undang</p>
+        <p>III. Semua rakyat dan warganegara Malaysia boleh menjadi calon dalam pilihan raya kecil atau umum</p>
+        <p>IV. Rakyat Malaysia bebas memohon jawatan kosong yang diiklankan oleh pihak kerajaan dan swasta mengikut kelayakan akademik </p>
+        <p onclick="checkAnswer('question19', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question19', 'B')">B I dan IV</p>
+        <p onclick="checkAnswer('question19', 'C')">C II dan III</p>
+        <p onclick="checkAnswer('question19', 'D')">D III dan IV</p>
+        <p id="resultquestion19"></p> <!-- Added result element for question 19 -->
+    </div>
+
+    <div class="question" id="question20">
+        <p>20--Yang manakah merupakan tugas yang boleh dijalankan oleh Yang di-Pertuan Agomg di negeri baginda?</p>
+           <p onclick="checkAnswer('question20', 'A')">A Mentadbir negerinya </p>
+           <p onclick="checkAnswer('question20', 'B')">B Melantik Menteri Besar</p>
+           <p onclick="checkAnswer('question20', 'C')">C Tugas sebagai Ketua Agama Islam</p>
+           <p onclick="checkAnswer('question20', 'D')">D Melantik ahli Majlis Mesyuarat Kerajaan Negeri</p>
+        <p id="resultquestion20"></p> <!-- Added result element for question 20 -->
+    </div>
+
+
+  
+
